@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>id</key>
+		<integer>1</integer>
+		<key>sequence</key>
+		<integer>1</integer>
+		<key>question</key>
+		<string>what</string>
+		<key>rightAnswerID</key>
+		<integer>1</integer>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>1</integer>
+				<key>sequence</key>
+				<integer>1</integer>
+				<key>content</key>
+				<string>i&apos;m a</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>2</integer>
+				<key>sequence</key>
+				<integer>2</integer>
+				<key>content</key>
+				<string>i&apos;m b</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>3</integer>
+				<key>sequence</key>
+				<integer>3</integer>
+				<key>content</key>
+				<string>i&apos;m c</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>4</integer>
+				<key>sequence</key>
+				<integer>4</integer>
+				<key>content</key>
+				<string>i&apos;m d</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>id</key>
+		<integer>2</integer>
+		<key>sequence</key>
+		<integer>2</integer>
+		<key>question</key>
+		<string>who</string>
+		<key>rightAnswerID</key>
+		<integer>2</integer>
+		<key>answers</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>1</integer>
+				<key>sequence</key>
+				<integer>1</integer>
+				<key>content</key>
+				<string>alice</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>2</integer>
+				<key>sequence</key>
+				<integer>2</integer>
+				<key>content</key>
+				<string>bob</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>3</integer>
+				<key>sequence</key>
+				<integer>3</integer>
+				<key>content</key>
+				<string>charlie</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>4</integer>
+				<key>sequence</key>
+				<integer>4</integer>
+				<key>content</key>
+				<string>dave</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
