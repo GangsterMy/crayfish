@@ -7,8 +7,11 @@
 //
 
 #import "MYQuestionManager.h"
+#import "MYQuestion.h"
 
 @interface MYQuestionManager ()
+
+@property (copy, nonatomic, readwrite) NSArray *allQuestions;
 
 @end
 
@@ -25,9 +28,23 @@
     return sharedManager;
 }
 
-- (void)getQuestionData {
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.allQuestions = [self readAllQuestions];
+    }
+    return self;
+}
+
+- (NSArray *)readAllQuestions {
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Questions" ofType:@"plist"];
-    NSArray *allQuestions = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    NSArray *questionItems = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    NSMutableArray *questions = [[NSMutableArray alloc] init];
+    for (NSDictionary *questionItem in questionItems) {
+        MYQuestion *question = [[MYQuestion alloc] initWithObject:questionItem];
+        [questions addObject:question];
+    }
+    return questions;
 }
 
 @end

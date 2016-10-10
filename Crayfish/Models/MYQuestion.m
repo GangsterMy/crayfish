@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSNumber *rightAnswerID;
 @property (strong, nonatomic) NSNumber *sequence;
 @property (copy, nonatomic) NSString *question;
-@property (copy, nonatomic) NSOrderedSet<MYAnswer *> *answers;
+@property (copy, nonatomic) NSArray *answers;
 
 @end
 
@@ -28,7 +28,13 @@
         self.rightAnswerID = [object objectForKey:@"rightAnswerID"];
         self.sequence = [object objectForKey:@"sequence"];
         self.question = [object objectForKey:@"question"];
-        self.answers = [[NSOrderedSet alloc] init];
+        NSArray *answerItems = [object objectForKey:@"answers"];
+        NSMutableArray *answers = [[NSMutableArray alloc] init];
+        for (NSDictionary *answerItem in answerItems) {
+            MYAnswer *answer = [[MYAnswer alloc] initWithObject:answerItem];
+            [answers addObject:answer];
+        }
+        self.answers = answers;
     }
     return self;
 }

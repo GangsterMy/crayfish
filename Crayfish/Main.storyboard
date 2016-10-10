@@ -71,7 +71,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="safariButtonTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8NF-fI-K6r"/>
+                                    <segue destination="8vL-7k-nQF" kind="show" id="JLN-Qv-Tw6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,6 +91,9 @@
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="gpst" id="VLh-w8-0cm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="safariButtonTouchUp:" destination="BYZ-38-t0r" id="ESa-tT-RMA"/>
+                            </connections>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="dSZ-Os-pNs">
                             <rect key="frame" x="113" y="7" width="150" height="30"/>
@@ -109,7 +112,6 @@
                     <connections>
                         <outlet property="startButton" destination="6Px-mG-XAo" id="f2s-gc-PMF"/>
                         <outlet property="statusLabel" destination="poH-Vq-agq" id="aaf-wK-uPt"/>
-                        <segue destination="8vL-7k-nQF" kind="show" id="wp0-Bs-z5a"/>
                         <segue destination="llo-wn-lfa" kind="presentation" id="bnc-4H-tMi"/>
                     </connections>
                 </viewController>
@@ -128,12 +130,44 @@
                     <view key="view" contentMode="scaleToFill" id="BmZ-TP-Bzs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-Fq-bK7">
+                                <color key="tintColor" red="0.090196078430000007" green="0.17254901959999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Mcj-Sd-Hk7"/>
+                                    <constraint firstAttribute="width" constant="345" id="ryl-1M-OlE"/>
+                                </constraints>
+                            </progressView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="seu-ZM-t8J">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3iC-Nm-zJ7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8vL-7k-nQF" id="xIJ-Rd-LGj"/>
+                                    <outlet property="delegate" destination="8vL-7k-nQF" id="B3e-A8-EEU"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X0q-Fq-bK7" firstAttribute="centerX" secondItem="BmZ-TP-Bzs" secondAttribute="centerX" id="8Ym-f2-86y"/>
+                            <constraint firstItem="FeR-cI-dsg" firstAttribute="top" secondItem="seu-ZM-t8J" secondAttribute="bottom" id="KrD-O6-kfc"/>
+                            <constraint firstItem="seu-ZM-t8J" firstAttribute="top" secondItem="X0q-Fq-bK7" secondAttribute="bottom" constant="10" id="MMc-st-vU9"/>
+                            <constraint firstItem="X0q-Fq-bK7" firstAttribute="top" secondItem="q7Q-8U-wEI" secondAttribute="bottom" constant="10" id="Wsn-7h-dSx"/>
+                            <constraint firstItem="seu-ZM-t8J" firstAttribute="leading" secondItem="BmZ-TP-Bzs" secondAttribute="leading" id="dY9-wX-D5E"/>
+                            <constraint firstAttribute="trailing" secondItem="seu-ZM-t8J" secondAttribute="trailing" id="r1X-fw-tue"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fB7-gZ-0As"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7Z-zw-uYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="-1095"/>
+            <point key="canvasLocation" x="1734" y="-1095"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P2z-gQ-fhp">

@@ -7,6 +7,7 @@
 //
 
 #import "MYTrainingViewController.h"
+#import "MYTrainingCell.h"
 
 typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 {
@@ -17,6 +18,7 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 @interface MYTrainingViewController ()
 
 @property (assign, nonatomic) MYTrainingViewControllerType type;
+@property (strong, nonatomic) NSArray *questions;
 
 @end
 
@@ -32,14 +34,20 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UICollectionViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
 }
-*/
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.questions.count;
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MYTrainingCell *trainingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYTrainingCell" forIndexPath:indexPath];
+    return trainingCell;
+}
 
 @end

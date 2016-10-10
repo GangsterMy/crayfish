@@ -7,12 +7,23 @@
 //
 
 #import "MYTrainingCell.h"
+#import "MYQuestion.h"
+
+@interface MYTrainingCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+@end
 
 @implementation MYTrainingCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)configureWithQuestion:(MYQuestion *)quesiton {
+    
 }
 
 @end

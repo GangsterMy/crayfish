@@ -10,6 +10,7 @@
 
 @interface MYAnswer ()
 
+@property (strong, nonatomic) NSNumber *answerID;
 @property (strong, nonatomic) NSNumber *sequence;
 @property (copy, nonatomic) NSString *content;
 
@@ -20,6 +21,7 @@
 - (instancetype)initWithObject:(id)object {
     self = [super init];
     if (self) {
+        self.answerID = [object objectForKey:@"id"];
         self.sequence = [object objectForKey:@"sequence"];
         self.content = [object objectForKey:@"content"];
     }

@@ -10,6 +10,8 @@
 
 @interface MYQuestionManager : NSObject
 
+@property (strong, nonatomic, readonly) NSArray *allQuestions;
+
 + (MYQuestionManager *)sharedManager;
 
 @end
