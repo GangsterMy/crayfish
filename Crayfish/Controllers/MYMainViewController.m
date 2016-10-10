@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, MYMainViewControllerType)
 };
 
 @interface MYMainViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (assign, nonatomic) MYMainViewControllerType type;

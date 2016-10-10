@@ -15,7 +15,9 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 };
 
 @interface MYTrainingViewController ()
+
 @property (assign, nonatomic) MYTrainingViewControllerType type;
+
 @end
 
 @implementation MYTrainingViewController

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0851441DAB44B80070C336 /* MYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851431DAB44B80070C336 /* MYDataManager.m */; };
+		0F0851471DAB60D00070C336 /* MYQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851461DAB60D00070C336 /* MYQuestionManager.m */; };
+		0F08514A1DAB67A80070C336 /* MYQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851491DAB67A80070C336 /* MYQuestion.m */; };
+		0F08514D1DAB7D080070C336 /* MYAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F08514C1DAB7D080070C336 /* MYAnswer.m */; };
 		0FFA43741DA8A4D9009BC21E /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FFA43731DA8A4D9009BC21E /* Questions.plist */; };
 		0FFA43971DA9050D009BC21E /* crayfish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA43951DA9050D009BC21E /* crayfish.xcdatamodeld */; };
 		0FFA43A01DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA43991DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m */; };
@@ -27,6 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0851421DAB44B80070C336 /* MYDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYDataManager.h; sourceTree = "<group>"; };
+		0F0851431DAB44B80070C336 /* MYDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYDataManager.m; sourceTree = "<group>"; };
+		0F0851451DAB60D00070C336 /* MYQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQuestionManager.h; sourceTree = "<group>"; };
+		0F0851461DAB60D00070C336 /* MYQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQuestionManager.m; sourceTree = "<group>"; };
+		0F0851481DAB67A80070C336 /* MYQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYQuestion.h; sourceTree = "<group>"; };
+		0F0851491DAB67A80070C336 /* MYQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQuestion.m; sourceTree = "<group>"; };
+		0F08514B1DAB7D080070C336 /* MYAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnswer.h; sourceTree = "<group>"; };
+		0F08514C1DAB7D080070C336 /* MYAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnswer.m; sourceTree = "<group>"; };
 		0F67B3AC1DA7F30000ED058E /* crayfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crayfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFA43731DA8A4D9009BC21E /* Questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
 		0FFA43961DA9050D009BC21E /* crayfish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = crayfish.xcdatamodel; sourceTree = "<group>"; };
@@ -78,6 +90,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		0F0851411DAB3EDE0070C336 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0F0851421DAB44B80070C336 /* MYDataManager.h */,
+				0F0851431DAB44B80070C336 /* MYDataManager.m */,
+				0F0851451DAB60D00070C336 /* MYQuestionManager.h */,
+				0F0851461DAB60D00070C336 /* MYQuestionManager.m */,
+			);
+			name = Services;
+			path = Crayfish/Services;
+			sourceTree = SOURCE_ROOT;
+		};
 		0F67B3A31DA7F30000ED058E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,7 @@
 		0F67B3AE1DA7F30000ED058E /* Crayfish */ = {
 			isa = PBXGroup;
 			children = (
+				0F0851411DAB3EDE0070C336 /* Services */,
 				0FFA43751DA8A7AB009BC21E /* Models */,
 				0FFA43F41DA9206F009BC21E /* Views */,
 				0FFA43761DA8A7BD009BC21E /* Controllers */,
@@ -143,6 +168,10 @@
 				0FFA439D1DA9054B009BC21E /* MYUser+CoreDataClass.m */,
 				0FFA439E1DA9054B009BC21E /* MYUser+CoreDataProperties.h */,
 				0FFA439F1DA9054B009BC21E /* MYUser+CoreDataProperties.m */,
+				0F0851481DAB67A80070C336 /* MYQuestion.h */,
+				0F0851491DAB67A80070C336 /* MYQuestion.m */,
+				0F08514B1DAB7D080070C336 /* MYAnswer.h */,
+				0F08514C1DAB7D080070C336 /* MYAnswer.m */,
 				0FFA43951DA9050D009BC21E /* crayfish.xcdatamodeld */,
 			);
 			name = Models;
@@ -307,7 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FFA43A21DA9054B009BC21E /* MYUser+CoreDataClass.m in Sources */,
+				0F0851441DAB44B80070C336 /* MYDataManager.m in Sources */,
 				0FFA43A11DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m in Sources */,
+				0F08514D1DAB7D080070C336 /* MYAnswer.m in Sources */,
+				0F0851471DAB60D00070C336 /* MYQuestionManager.m in Sources */,
+				0F08514A1DAB67A80070C336 /* MYQuestion.m in Sources */,
 				0FFA43A01DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m in Sources */,
 				0FFA43A31DA9054B009BC21E /* MYUser+CoreDataProperties.m in Sources */,
 				0FFA44041DAA0549009BC21E /* MYTrainingViewController.m in Sources */,
