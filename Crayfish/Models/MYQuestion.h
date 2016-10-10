@@ -10,6 +10,12 @@
 
 @interface MYQuestion : NSObject
 
+@property (strong, nonatomic, readonly) NSNumber *questionID;
+@property (strong, nonatomic, readonly) NSNumber *rightAnswerID;
+@property (strong, nonatomic, readonly) NSNumber *sequence;
+@property (copy, nonatomic, readonly) NSString *question;
+@property (copy, nonatomic, readonly) NSArray *answers;
+
 - (instancetype)initWithObject:(id)object;
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MYQuestion.h"
 
 @interface MYTrainingCell : UICollectionViewCell
+
+- (void)configureWithQuestion:(MYQuestion *)quesiton;
 
 @end

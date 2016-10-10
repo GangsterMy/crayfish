@@ -7,7 +7,6 @@
 //
 
 #import "MYTrainingCell.h"
-#import "MYQuestion.h"
 
 @interface MYTrainingCell ()
 
@@ -23,7 +22,7 @@
 }
 
 - (void)configureWithQuestion:(MYQuestion *)quesiton {
-    
+    self.contentLabel.text = quesiton.question;
 }
 
 @end

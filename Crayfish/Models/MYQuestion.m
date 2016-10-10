@@ -11,11 +11,11 @@
 
 @interface MYQuestion ()
 
-@property (strong, nonatomic) NSNumber *questionID;
-@property (strong, nonatomic) NSNumber *rightAnswerID;
-@property (strong, nonatomic) NSNumber *sequence;
-@property (copy, nonatomic) NSString *question;
-@property (copy, nonatomic) NSArray *answers;
+@property (strong, nonatomic, readwrite) NSNumber *questionID;
+@property (strong, nonatomic, readwrite) NSNumber *rightAnswerID;
+@property (strong, nonatomic, readwrite) NSNumber *sequence;
+@property (copy, nonatomic, readwrite) NSString *question;
+@property (copy, nonatomic, readwrite) NSArray *answers;
 
 @end
 

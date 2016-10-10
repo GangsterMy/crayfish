@@ -44,9 +44,18 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     return self.questions.count;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(375, 200);
+}
+
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MYQuestion *question = [self.questions objectAtIndex:indexPath.row];
     MYTrainingCell *trainingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYTrainingCell" forIndexPath:indexPath];
+//    if (!trainingCell) {
+//        trainingCell = [[NSBundle mainBundle] loadNibNamed:@"MYTrainingCell" owner:nil options:nil].lastObject;
+//    }
+    [trainingCell configureWithQuestion:question];
     return trainingCell;
 }
 
