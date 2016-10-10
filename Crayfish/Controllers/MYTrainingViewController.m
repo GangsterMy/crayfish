@@ -8,6 +8,7 @@
 
 #import "MYTrainingViewController.h"
 #import "MYTrainingCell.h"
+#import "MYQuestionManager.h"
 
 typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 {
@@ -15,10 +16,11 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     MYTrainingViewControllerTypeMistakes
 };
 
-@interface MYTrainingViewController ()
+@interface MYTrainingViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (assign, nonatomic) MYTrainingViewControllerType type;
 @property (strong, nonatomic) NSArray *questions;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -27,6 +29,8 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.questions = [MYQuestionManager sharedManager].allQuestions;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"MYTrainingCell" bundle:nil] forCellWithReuseIdentifier:@"MYTrainingCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,16 +49,12 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(375, 200);
+    return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MYQuestion *question = [self.questions objectAtIndex:indexPath.row];
     MYTrainingCell *trainingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYTrainingCell" forIndexPath:indexPath];
-//    if (!trainingCell) {
-//        trainingCell = [[NSBundle mainBundle] loadNibNamed:@"MYTrainingCell" owner:nil options:nil].lastObject;
-//    }
     [trainingCell configureWithQuestion:question];
     return trainingCell;
 }
