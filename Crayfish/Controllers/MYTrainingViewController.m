@@ -21,6 +21,7 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
 @property (assign, nonatomic) MYTrainingViewControllerType type;
 @property (strong, nonatomic) NSArray *questions;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end
 
@@ -30,6 +31,7 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     [super viewDidLoad];
     self.questions = [MYQuestionManager sharedManager].allQuestions;
     [self.collectionView registerNib:[UINib nibWithNibName:@"MYTrainingCell" bundle:nil] forCellWithReuseIdentifier:@"MYTrainingCell"];
+    [self performSelectorOnMainThread:@selector(collectionView:didSelectItemAtIndexPath:) withObject:nil waitUntilDone:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +57,10 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     MYTrainingCell *trainingCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYTrainingCell" forIndexPath:indexPath];
     [trainingCell configureWithQuestion:question];
     return trainingCell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.progressView.progress = (indexPath.row + 1) / (float)self.questions.count;
 }
 
 @end

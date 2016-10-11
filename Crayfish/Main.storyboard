@@ -131,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-Fq-bK7">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-Fq-bK7">
                                 <color key="tintColor" red="0.090196078430000007" green="0.17254901959999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Mcj-Sd-Hk7"/>
@@ -166,6 +166,7 @@
                     <navigationItem key="navigationItem" id="fB7-gZ-0As"/>
                     <connections>
                         <outlet property="collectionView" destination="seu-ZM-t8J" id="V1U-sb-B9W"/>
+                        <outlet property="progressView" destination="X0q-Fq-bK7" id="ZWC-PQ-UQ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7Z-zw-uYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
