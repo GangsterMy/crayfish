@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     [super viewDidLoad];
     self.questions = [MYQuestionManager sharedManager].allQuestions;
     [self.collectionView registerNib:[UINib nibWithNibName:@"MYTrainingCell" bundle:nil] forCellWithReuseIdentifier:@"MYTrainingCell"];
-    [self performSelectorOnMainThread:@selector(collectionView:didSelectItemAtIndexPath:) withObject:nil waitUntilDone:nil];
+//    [self performSelectorOnMainThread:@selector(collectionView:willDisplayCell:forItemAtIndexPath:) withObject:nil waitUntilDone:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -2,7 +2,7 @@
 //  MYUserAnswer+CoreDataProperties.h
 //  crayfish
 //
-//  Created by 赵麦 on 10/8/16.
+//  Created by 赵麦 on 10/13/16.
 //  Copyright © 2016 Zmy. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<MYUserAnswer *> *)fetchRequest;
 
-@property (nonatomic) int64_t id;
+@property (nonatomic) int64_t answerID;
 @property (nonatomic) BOOL isRight;
 @property (nonatomic) int64_t questionID;
 @property (nonatomic) int64_t selection;

@@ -6,5 +6,6 @@ target 'crayfish' do
   # use_frameworks!
 
   # Pods for crayfish
+  pod 'IQKeyboardManager'
 
 end

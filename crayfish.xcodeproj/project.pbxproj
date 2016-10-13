@@ -11,12 +11,14 @@
 		0F0851471DAB60D00070C336 /* MYQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851461DAB60D00070C336 /* MYQuestionManager.m */; };
 		0F08514A1DAB67A80070C336 /* MYQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851491DAB67A80070C336 /* MYQuestion.m */; };
 		0F08514D1DAB7D080070C336 /* MYAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F08514C1DAB7D080070C336 /* MYAnswer.m */; };
+		0F0851531DAE35760070C336 /* MYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851521DAE35760070C336 /* MYLoginViewController.m */; };
+		0F0851561DAF8BAE0070C336 /* MYDataManager+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851551DAF8BAE0070C336 /* MYDataManager+User.m */; };
+		0F0851611DAF96130070C336 /* MYUserAnswer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F08515C1DAF96130070C336 /* MYUserAnswer+CoreDataClass.m */; };
+		0F0851621DAF96130070C336 /* MYUserAnswer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F08515E1DAF96130070C336 /* MYUserAnswer+CoreDataProperties.m */; };
+		0F0851671DAFA6C70070C336 /* MYUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851641DAFA6C70070C336 /* MYUser+CoreDataClass.m */; };
+		0F0851681DAFA6C70070C336 /* MYUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0851661DAFA6C70070C336 /* MYUser+CoreDataProperties.m */; };
 		0FFA43741DA8A4D9009BC21E /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FFA43731DA8A4D9009BC21E /* Questions.plist */; };
 		0FFA43971DA9050D009BC21E /* crayfish.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA43951DA9050D009BC21E /* crayfish.xcdatamodeld */; };
-		0FFA43A01DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA43991DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m */; };
-		0FFA43A11DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA439B1DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m */; };
-		0FFA43A21DA9054B009BC21E /* MYUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA439D1DA9054B009BC21E /* MYUser+CoreDataClass.m */; };
-		0FFA43A31DA9054B009BC21E /* MYUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA439F1DA9054B009BC21E /* MYUser+CoreDataProperties.m */; };
 		0FFA43BB1DA90EF3009BC21E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FFA43BA1DA90EF3009BC21E /* Info.plist */; };
 		0FFA43E31DA910FF009BC21E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA43E21DA910FF009BC21E /* main.m */; };
 		0FFA43E81DA91117009BC21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFA43E41DA91117009BC21E /* LaunchScreen.storyboard */; };
@@ -39,17 +41,21 @@
 		0F0851491DAB67A80070C336 /* MYQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYQuestion.m; sourceTree = "<group>"; };
 		0F08514B1DAB7D080070C336 /* MYAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYAnswer.h; sourceTree = "<group>"; };
 		0F08514C1DAB7D080070C336 /* MYAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYAnswer.m; sourceTree = "<group>"; };
+		0F0851511DAE35760070C336 /* MYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYLoginViewController.h; sourceTree = "<group>"; };
+		0F0851521DAE35760070C336 /* MYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYLoginViewController.m; sourceTree = "<group>"; };
+		0F0851541DAF8BAE0070C336 /* MYDataManager+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYDataManager+User.h"; sourceTree = "<group>"; };
+		0F0851551DAF8BAE0070C336 /* MYDataManager+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYDataManager+User.m"; sourceTree = "<group>"; };
+		0F08515B1DAF96130070C336 /* MYUserAnswer+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUserAnswer+CoreDataClass.h"; sourceTree = "<group>"; };
+		0F08515C1DAF96130070C336 /* MYUserAnswer+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUserAnswer+CoreDataClass.m"; sourceTree = "<group>"; };
+		0F08515D1DAF96130070C336 /* MYUserAnswer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUserAnswer+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0F08515E1DAF96130070C336 /* MYUserAnswer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUserAnswer+CoreDataProperties.m"; sourceTree = "<group>"; };
+		0F0851631DAFA6C70070C336 /* MYUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		0F0851641DAFA6C70070C336 /* MYUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		0F0851651DAFA6C70070C336 /* MYUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		0F0851661DAFA6C70070C336 /* MYUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0F67B3AC1DA7F30000ED058E /* crayfish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crayfish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FFA43731DA8A4D9009BC21E /* Questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
 		0FFA43961DA9050D009BC21E /* crayfish.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = crayfish.xcdatamodel; sourceTree = "<group>"; };
-		0FFA43981DA9054B009BC21E /* MYUserAnswer+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUserAnswer+CoreDataClass.h"; sourceTree = "<group>"; };
-		0FFA43991DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUserAnswer+CoreDataClass.m"; sourceTree = "<group>"; };
-		0FFA439A1DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUserAnswer+CoreDataProperties.h"; sourceTree = "<group>"; };
-		0FFA439B1DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUserAnswer+CoreDataProperties.m"; sourceTree = "<group>"; };
-		0FFA439C1DA9054B009BC21E /* MYUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUser+CoreDataClass.h"; sourceTree = "<group>"; };
-		0FFA439D1DA9054B009BC21E /* MYUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUser+CoreDataClass.m"; sourceTree = "<group>"; };
-		0FFA439E1DA9054B009BC21E /* MYUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MYUser+CoreDataProperties.h"; sourceTree = "<group>"; };
-		0FFA439F1DA9054B009BC21E /* MYUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MYUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		0FFA43BA1DA90EF3009BC21E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Crayfish/Info.plist; sourceTree = SOURCE_ROOT; };
 		0FFA43E21DA910FF009BC21E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Crayfish/main.m; sourceTree = SOURCE_ROOT; };
 		0FFA43E41DA91117009BC21E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Crayfish/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -97,6 +103,8 @@
 				0F0851431DAB44B80070C336 /* MYDataManager.m */,
 				0F0851451DAB60D00070C336 /* MYQuestionManager.h */,
 				0F0851461DAB60D00070C336 /* MYQuestionManager.m */,
+				0F0851541DAF8BAE0070C336 /* MYDataManager+User.h */,
+				0F0851551DAF8BAE0070C336 /* MYDataManager+User.m */,
 			);
 			name = Services;
 			path = Crayfish/Services;
@@ -160,14 +168,14 @@
 		0FFA43751DA8A7AB009BC21E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0FFA43981DA9054B009BC21E /* MYUserAnswer+CoreDataClass.h */,
-				0FFA43991DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m */,
-				0FFA439A1DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.h */,
-				0FFA439B1DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m */,
-				0FFA439C1DA9054B009BC21E /* MYUser+CoreDataClass.h */,
-				0FFA439D1DA9054B009BC21E /* MYUser+CoreDataClass.m */,
-				0FFA439E1DA9054B009BC21E /* MYUser+CoreDataProperties.h */,
-				0FFA439F1DA9054B009BC21E /* MYUser+CoreDataProperties.m */,
+				0F0851631DAFA6C70070C336 /* MYUser+CoreDataClass.h */,
+				0F0851641DAFA6C70070C336 /* MYUser+CoreDataClass.m */,
+				0F0851651DAFA6C70070C336 /* MYUser+CoreDataProperties.h */,
+				0F0851661DAFA6C70070C336 /* MYUser+CoreDataProperties.m */,
+				0F08515B1DAF96130070C336 /* MYUserAnswer+CoreDataClass.h */,
+				0F08515C1DAF96130070C336 /* MYUserAnswer+CoreDataClass.m */,
+				0F08515D1DAF96130070C336 /* MYUserAnswer+CoreDataProperties.h */,
+				0F08515E1DAF96130070C336 /* MYUserAnswer+CoreDataProperties.m */,
 				0F0851481DAB67A80070C336 /* MYQuestion.h */,
 				0F0851491DAB67A80070C336 /* MYQuestion.m */,
 				0F08514B1DAB7D080070C336 /* MYAnswer.h */,
@@ -185,6 +193,8 @@
 				0FFA43FB1DA93317009BC21E /* MYMainViewController.m */,
 				0FFA44021DAA0549009BC21E /* MYTrainingViewController.h */,
 				0FFA44031DAA0549009BC21E /* MYTrainingViewController.m */,
+				0F0851511DAE35760070C336 /* MYLoginViewController.h */,
+				0F0851521DAE35760070C336 /* MYLoginViewController.m */,
 			);
 			name = Controllers;
 			path = Crayfish/Controllers;
@@ -335,20 +345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FFA43A21DA9054B009BC21E /* MYUser+CoreDataClass.m in Sources */,
+				0F0851671DAFA6C70070C336 /* MYUser+CoreDataClass.m in Sources */,
 				0F0851441DAB44B80070C336 /* MYDataManager.m in Sources */,
-				0FFA43A11DA9054B009BC21E /* MYUserAnswer+CoreDataProperties.m in Sources */,
 				0F08514D1DAB7D080070C336 /* MYAnswer.m in Sources */,
+				0F0851561DAF8BAE0070C336 /* MYDataManager+User.m in Sources */,
+				0F0851621DAF96130070C336 /* MYUserAnswer+CoreDataProperties.m in Sources */,
 				0F0851471DAB60D00070C336 /* MYQuestionManager.m in Sources */,
+				0F0851681DAFA6C70070C336 /* MYUser+CoreDataProperties.m in Sources */,
 				0F08514A1DAB67A80070C336 /* MYQuestion.m in Sources */,
-				0FFA43A01DA9054B009BC21E /* MYUserAnswer+CoreDataClass.m in Sources */,
-				0FFA43A31DA9054B009BC21E /* MYUser+CoreDataProperties.m in Sources */,
 				0FFA44041DAA0549009BC21E /* MYTrainingViewController.m in Sources */,
 				0FFA44001DAA0515009BC21E /* MYTrainingCell.m in Sources */,
 				0FFA43EA1DA91117009BC21E /* MYAppDelegate.m in Sources */,
 				0FFA43971DA9050D009BC21E /* crayfish.xcdatamodeld in Sources */,
 				0FFA43FC1DA93317009BC21E /* MYMainViewController.m in Sources */,
 				0FFA43E31DA910FF009BC21E /* main.m in Sources */,
+				0F0851531DAE35760070C336 /* MYLoginViewController.m in Sources */,
+				0F0851611DAF96130070C336 /* MYUserAnswer+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

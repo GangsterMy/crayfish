@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-crayfish.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C86E9819F38F6B4BFE4BEDDAC95C6FF8</key>
+		<key>00FBCF2950563328294470F3B9584C2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C743C42395D3C33F9883CB4690B475A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

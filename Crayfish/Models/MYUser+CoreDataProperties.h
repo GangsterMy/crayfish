@@ -2,7 +2,7 @@
 //  MYUser+CoreDataProperties.h
 //  crayfish
 //
-//  Created by 赵麦 on 10/8/16.
+//  Created by 赵麦 on 10/13/16.
 //  Copyright © 2016 Zmy. All rights reserved.
 //
 
@@ -16,9 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSFetchRequest<MYUser *> *)fetchRequest;
 
 @property (nonatomic) int64_t currentQuestionID;
-@property (nonatomic) int64_t id;
+@property (nonatomic) int64_t userID;
 @property (nullable, nonatomic, copy) NSString *token;
 @property (nullable, nonatomic, copy) NSString *username;
+@property (nonatomic) BOOL isActive;
 @property (nullable, nonatomic, retain) NSOrderedSet<MYUserAnswer *> *answers;
 
 @end
