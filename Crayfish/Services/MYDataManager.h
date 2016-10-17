@@ -11,7 +11,7 @@
 
 @interface MYDataManager : NSObject
 
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 + (MYDataManager *)sharedManager;
 

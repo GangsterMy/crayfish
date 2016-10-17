@@ -7,6 +7,8 @@
 //
 
 #import "MYLoginViewController.h"
+#import "MYDataManager+User.h"
+#import "MYUser+CoreDataProperties.h"
 
 @interface MYLoginViewController ()
 
@@ -43,6 +45,9 @@
 #pragma mark - EventHandler
 
 - (IBAction)loginButtonTouchUp:(id)sender {
+    MYUser *newUser = [[MYDataManager sharedManager] insertOrUpdateUserWithID:1 username:@"Username" token:[NSUUID UUID].UUIDString];
+    [[MYDataManager sharedManager] setCurrentUserWithID:newUser.userID];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)findPasswordButtonTouchUp:(id)sender {

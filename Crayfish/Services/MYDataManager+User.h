@@ -13,6 +13,8 @@
 @interface MYDataManager (User)
 
 - (MYUser *)currentUser;
-- (MYUser *)insertOrUpdateUserWithObject:(id)userObject active:(BOOL)active token:(NSString *)token;
+- (MYUser *)setCurrentUserWithID:(int64_t)userID;
+- (MYUser *)userByID:(int64_t)userID;
+- (MYUser *)insertOrUpdateUserWithID:(int64_t)userID username:(NSString *)username token:(NSString *)token;
 
 @end

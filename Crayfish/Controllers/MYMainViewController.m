@@ -8,6 +8,8 @@
 
 #import "MYMainViewController.h"
 #import "MYQuestionManager.h"
+#import "MYDataManager+User.h"
+#import "MYUser+CoreDataProperties.h"
 
 typedef NS_ENUM(NSUInteger, MYMainViewControllerType)
 {
@@ -29,6 +31,12 @@ typedef NS_ENUM(NSUInteger, MYMainViewControllerType)
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateInterface];
+    
+    if (![MYDataManager sharedManager].currentUser) {
+        self.questions = [MYQuestionManager sharedManager].allQuestions;
+    } else {
+    }
+    
     self.questions = [MYQuestionManager sharedManager].allQuestions;
 }
 

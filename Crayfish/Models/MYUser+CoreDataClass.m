@@ -7,7 +7,7 @@
 //
 
 #import "MYUser+CoreDataClass.h"
-#import "MYUserAnswer.h"
+#import "MYUserAnswer+CoreDataClass.h"
 @implementation MYUser
 
 @end

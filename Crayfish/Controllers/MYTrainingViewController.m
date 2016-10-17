@@ -31,7 +31,11 @@ typedef NS_ENUM(NSUInteger, MYTrainingViewControllerType)
     [super viewDidLoad];
     self.questions = [MYQuestionManager sharedManager].allQuestions;
     [self.collectionView registerNib:[UINib nibWithNibName:@"MYTrainingCell" bundle:nil] forCellWithReuseIdentifier:@"MYTrainingCell"];
-//    [self performSelectorOnMainThread:@selector(collectionView:willDisplayCell:forItemAtIndexPath:) withObject:nil waitUntilDone:nil];
+    [self updateProgressWithIndex:0];
+}
+
+- (void)updateProgressWithIndex:(NSInteger)index {
+    self.progressView.progress = (index + 1.0) / self.questions.count;
 }
 
 - (void)didReceiveMemoryWarning {
